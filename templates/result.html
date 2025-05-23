@@ -1,0 +1,94 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Kết quả nhận diện - PetShop{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <h2 class="text-center mb-4">📸 Kết quả nhận diện</h2>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 text-center">
+                <img src="{{ url_for('uploaded_file', filename=filename) }}" class="img-thumbnail rounded shadow-lg" style="max-height: 400px; object-fit: contain; border: 5px solid var(--primary-color);" alt="Ảnh mèo đã tải lên">
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary"><i class="fas fa-cat me-2"></i>Giống mèo dự đoán: <span class="text-success">{{ predicted_label }}</span></h4>
+                        
+                        {% if top_predictions_list %}
+                        <h5 class="mt-4"><i class="fas fa-chart-bar me-2"></i>Các giống mèo có thể:</h5>
+                        <ul class="list-group list-group-flush">
+                            {% for item in top_predictions_list %}
+                                <li class="list-group-item">{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if recommended_products %}
+        <div class="my-5">
+            <h3 class="text-center mb-4 pb-2 border-bottom text-primary"><i class="fas fa-paw me-2"></i>Sản phẩm gợi ý cho giống mèo {{ predicted_label }}</h3>
+            <div class="products-grid">
+                {% for product in recommended_products %}
+                <div class="product-card">
+                    <a href="{{ url_for('product_detail', category_name=product.category_slug, product_index=product.index) }}" class="text-decoration-none text-dark">
+                        <img src="{{ url_for('static', filename='Image/' + product.image) }}" alt="{{ product.name }}">
+                        <h4 class="product-name">{{ product.name }}</h4>
+                    </a>
+                    <p class="product-price">{{ "{:,.0f}".format(product.price) }} Đ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-info text-center" role="alert">
+            Không có sản phẩm gợi ý cụ thể cho giống mèo này.
+        </div>
+        {% endif %}
+
+        {% if breed_info %}
+        <div class="card shadow-lg mb-5">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0"><i class="fas fa-info-circle me-2"></i>Thông tin chi tiết về giống mèo {{ predicted_label }}</h3>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3"><i class="fas fa-file-alt me-2"></i>Mô tả:</dt>
+                    <dd class="col-sm-9">{{ breed_info.description }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-globe me-2"></i>Nguồn gốc:</dt>
+                    <dd class="col-sm-9">{{ breed_info.origin }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-heart me-2"></i>Tính cách:</dt>
+                    <dd class="col-sm-9">{{ breed_info.personality }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-hand-holding-heart me-2"></i>Chăm sóc:</dt>
+                    <dd class="col-sm-9">{{ breed_info.care }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-paint-brush me-2"></i>Ngoại hình:</dt>
+                    <dd class="col-sm-9">{{ breed_info.appearance }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-notes-medical me-2"></i>Sức khỏe:</dt>
+                    <dd class="col-sm-9">{{ breed_info.health }}</dd>
+
+                    <dt class="col-sm-3"><i class="fas fa-lightbulb me-2"></i>Sự thật thú vị:</dt>
+                    <dd class="col-sm-9">{{ breed_info.fun_fact }}</dd>
+                </dl>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-warning text-center" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>Không tìm thấy thông tin chi tiết cho giống mèo {{ predicted_label }}.
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('advise') }}" class="btn btn-secondary btn-lg me-3"><i class="fas fa-arrow-left me-2"></i>Quay lại nhận diện khác</a>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg"><i class="fas fa-home me-2"></i>Về trang chủ PetShop</a>
+        </div>
+    </div>
+{% endblock %}

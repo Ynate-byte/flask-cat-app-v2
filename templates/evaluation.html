@@ -1,0 +1,76 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Báo cáo tổng quan mô hình{% endblock %}
+
+{% block content %}
+    <style>
+        /* CSS riêng cho trang đánh giá mô hình */
+        .card {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .img-preview {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .mis-img {
+            max-width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">📝 Báo cáo đánh giá mô hình phân loại mèo</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">🔍 Thông tin tổng quan</h5>
+                <ul>
+                    <li><strong>Model:</strong> EfficientNetV2B1</li>
+                    <li><strong>Số lớp:</strong> 31 lớp mèo</li>
+                    <li><strong>Số ảnh test:</strong> {{ num_test_images if num_test_images is defined else 'N/A' }} ảnh</li>
+                    <li><strong>Accuracy:</strong> {{ accuracy if accuracy is defined else 'N/A' }}%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📋 Classification Report</h5>
+                <pre>{{ report_text }}</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📊 Ma trận nhầm lẫn</h5>
+                <img src="{{ url_for('static', filename=confusion_matrix_img) }}" alt="Confusion Matrix" class="img-preview">
+            </div>
+        </div>
+
+        {% if misclassified_images %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📸 Một số ảnh bị dự đoán sai</h5>
+                <div class="d-flex flex-wrap">
+                    {% for img in misclassified_images %}
+                    <img src="{{ url_for('static', filename=img) }}" class="rounded shadow m-2" style="width: 180px;" alt="Misclassified image">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('advise') }}" class="btn btn-outline-primary">⬅️ Quay về Nhận diện mèo</a>
+            <a href="{{ url_for('download_report') }}" class="btn btn-success">📄 Tải báo cáo .txt</a>
+        </div>
+    </div>
+{% endblock %}

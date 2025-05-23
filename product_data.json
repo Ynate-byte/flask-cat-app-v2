@@ -1,0 +1,281 @@
+{
+  "Abyssinian": {
+    "description": "Abyssinian là giống mèo cổ xưa, rất thông minh, năng động, nổi bật với bộ lông ticked nhiều màu trên từng sợi lông.",
+    "origin": "Ethiopia (Abyssinia), phát triển ở Đông Nam Á và châu Âu.",
+    "personality": "Thân thiện, tò mò, hòa đồng, thích vận động, thích leo trèo và khám phá.",
+    "care": "Chải lông 1-2 lần/tuần, cung cấp nhiều đồ chơi và không gian vận động.",
+    "appearance": "Thân hình thon gọn, cơ bắp, chân dài, đuôi dài, tai lớn dựng đứng, mắt hạnh nhân màu vàng hoặc xanh lá, lông ngắn mượt, màu ruddy, đỏ, xanh xám hoặc fawn.",
+    "health": "Nhìn chung khỏe mạnh, tuổi thọ 9-15 năm, có thể gặp bệnh về răng, thận, thoái hóa võng mạc.",
+    "fun_fact": "Abyssinian có bộ lông ticked giống mèo hoang dã và thường được ví như 'báo nhỏ trong nhà'."
+  },
+  "American Shorthair": {
+    "description": "Mèo Mỹ lông ngắn phổ biến, thân hình chắc khỏe, lông dày và màu sắc đa dạng.",
+    "origin": "Bắc Mỹ, phát triển từ mèo châu Âu.",
+    "personality": "Điềm tĩnh, thân thiện, dễ gần, phù hợp với gia đình và trẻ nhỏ.",
+    "care": "Chải lông định kỳ, kiểm soát cân nặng, cho vận động vừa phải.",
+    "appearance": "Thân hình trung bình đến lớn, cơ bắp, đầu tròn, mắt to, lông ngắn dày, màu sắc và hoa văn phong phú.",
+    "health": "Tuổi thọ 15-20 năm, dễ bị béo phì, có thể mắc bệnh cơ tim phì đại.",
+    "fun_fact": "American Shorthair từng được nuôi để bắt chuột trên tàu di cư sang Mỹ."
+  },
+  "American Wirehair": {
+    "description": "Giống mèo lông xoăn cứng tự nhiên, thân hình nhỏ đến vừa, hiếm gặp.",
+    "origin": "Mỹ (New York, 1966).",
+    "personality": "Yên tĩnh, thân thiện, thích chơi đùa nhưng cũng độc lập.",
+    "care": "Chải lông nhẹ nhàng, không tắm/chải quá nhiều để tránh gãy lông.",
+    "appearance": "Thân hình nhỏ đến vừa, đầu tròn, mắt to, lông xoăn hoặc gợn sóng, nhiều màu sắc.",
+    "health": "Khá khỏe mạnh, tuổi thọ 14-20 năm, có thể gặp vấn đề về da, cơ tim phì đại, loạn sản hông.",
+    "fun_fact": "Lông xoăn của American Wirehair là do đột biến gen tự nhiên, rất hiếm thấy ở các giống mèo khác."
+  },
+  "Applehead Siamese": {
+    "description": "Mèo Xiêm cổ điển, đầu tròn như quả táo, thân chắc khỏe, không quá thon dài như Xiêm hiện đại.",
+    "origin": "Thái Lan.",
+    "personality": "Trung thành, tình cảm, thích trò chuyện, quấn quýt chủ.",
+    "care": "Chải lông định kỳ, vệ sinh răng miệng, kiểm tra sức khỏe mắt.",
+    "appearance": "Thân hình chắc, đầu tròn, mắt xanh lam, lông ngắn màu sáng với điểm màu tối ở mặt, tai, chân, đuôi.",
+    "health": "Tuổi thọ 12-20 năm, có thể gặp bệnh về mắt, thận, hô hấp.",
+    "fun_fact": "Tất cả mèo Xiêm đều sinh ra màu trắng, các điểm màu xuất hiện khi lớn lên do ảnh hưởng nhiệt độ."
+  },
+  "Balinese": {
+    "description": "Mèo Xiêm lông dài, đuôi xù, mắt xanh lam sâu, thông minh và tình cảm.",
+    "origin": "Mỹ, xuất hiện do đột biến lông dài ở mèo Xiêm.",
+    "personality": "Hoạt bát, thông minh, thích giao tiếp, trung thành, thích được chú ý.",
+    "care": "Chải lông thường xuyên, cần nhiều thời gian chơi và tương tác.",
+    "appearance": "Thân hình thon dài, lông dài mượt, đuôi xù, mặt nhọn, điểm màu tối ở mặt, tai, chân, đuôi.",
+    "health": "Tuổi thọ 15-20 năm, dễ gặp bệnh về răng, nướu, mắt và hệ hô hấp.",
+    "fun_fact": "Balinese còn được gọi là 'mèo Xiêm múa ba lê' nhờ dáng đi uyển chuyển và đuôi xù."
+  },
+  "Bengal": {
+    "description": "Mèo lai giữa mèo nhà và mèo báo châu Á, lông đốm như báo, cơ bắp phát triển.",
+    "origin": "Mỹ (thập niên 1980).",
+    "personality": "Năng động, thông minh, tò mò, thích leo trèo, gắn bó với chủ.",
+    "care": "Cần không gian rộng, nhiều đồ chơi, leo trèo, chải lông định kỳ.",
+    "appearance": "Thân hình lớn, cơ bắp, lông ngắn, đốm hoặc vằn, mắt to, màu lông óng ánh.",
+    "health": "Khá khỏe mạnh, tuổi thọ 12-16 năm, dễ gặp bệnh tim, rối loạn thần kinh, bệnh về mắt.",
+    "fun_fact": "Lông Bengal có thể ánh kim tuyến (glitter), lấp lánh dưới ánh sáng."
+  },
+  "Bombay": {
+    "description": "Mèo lông đen tuyền, mắt đồng, dáng giống báo nhỏ, thân thiện và tình cảm.",
+    "origin": "Mỹ.",
+    "personality": "Tình cảm, thân thiện, thích gần gũi chủ, dễ thích nghi.",
+    "care": "Chải lông thường xuyên, kiểm tra sức khỏe định kỳ.",
+    "appearance": "Thân hình trung bình, cơ bắp, lông ngắn đen bóng, mắt màu đồng hoặc vàng.",
+    "health": "Tuổi thọ 12-16 năm, dễ gặp vấn đề về hô hấp, tim mạch, răng miệng.",
+    "fun_fact": "Bombay được lai tạo để trông giống như 'báo đen thu nhỏ' trong nhà."
+  },
+  "British Shorthair": {
+    "description": "Mèo Anh lông ngắn, thân hình mập mạp, lông dày, mặt tròn dễ thương.",
+    "origin": "Anh.",
+    "personality": "Hiền lành, yên tĩnh, dễ nuôi, thích hợp sống trong căn hộ.",
+    "care": "Chải lông thường xuyên, kiểm soát cân nặng.",
+    "appearance": "Thân hình lớn, mập, đầu tròn, mắt to, lông ngắn dày, phổ biến nhất là màu xanh xám.",
+    "health": "Tuổi thọ 12-20 năm, dễ bị béo phì, bệnh cơ tim phì đại.",
+    "fun_fact": "British Shorthair là cảm hứng cho hình tượng mèo Cheshire trong Alice ở Xứ sở thần tiên."
+  },
+  "Burmese": {
+    "description": "Mèo lông ngắn, thân chắc, mắt vàng sáng, nổi bật với bộ lông bóng.",
+    "origin": "Myanmar.",
+    "personality": "Tình cảm, thích chơi, thân thiện, thích được chú ý.",
+    "care": "Chải lông định kỳ, cần nhiều quan tâm và tương tác.",
+    "appearance": "Thân hình nhỏ đến trung bình, cơ bắp, đầu tròn, mắt vàng, lông ngắn bóng.",
+    "health": "Tuổi thọ 10-17 năm, dễ gặp bệnh về cơ tim, hô hấp, răng miệng.",
+    "fun_fact": "Burmese rất thích leo trèo và có thể học được nhiều trò vui."
+  },
+  "Burmilla": {
+    "description": "Mèo lai giữa Burmese và Chinchilla Persian, lông trắng bạc óng ánh.",
+    "origin": "Anh.",
+    "personality": "Vui vẻ, thân thiện, thích chơi, hòa đồng với trẻ nhỏ.",
+    "care": "Chải lông nhẹ nhàng, kiểm tra răng miệng định kỳ.",
+    "appearance": "Thân hình trung bình, lông ngắn hoặc bán dài, màu bạc với viền đen nhẹ quanh mắt, môi, mũi.",
+    "health": "Tuổi thọ 10-15 năm, dễ gặp bệnh về thận, răng miệng.",
+    "fun_fact": "Burmilla là kết quả của lần lai giống tình cờ giữa mèo Burmese và Chinchilla Persian."
+  },
+  "Calico": {
+    "description": "Calico là thuật ngữ chỉ mèo tam thể (ba màu), không phải giống mèo riêng biệt.",
+    "origin": "Xuất hiện ở nhiều giống mèo khác nhau.",
+    "personality": "Tính cách đa dạng tùy theo giống.",
+    "care": "Chăm sóc như các giống mèo thông thường.",
+    "appearance": "Lông ba màu: trắng, cam, đen (hoặc xám, kem).",
+    "health": "Không có vấn đề sức khỏe riêng biệt do màu lông.",
+    "fun_fact": "Gần như tất cả mèo Calico đều là mèo cái do di truyền liên quan đến nhiễm sắc thể X."
+  },
+  "Canadian Hairless": {
+    "description": "Mèo không lông (Sphynx), da nhăn, thân nhiệt cao, rất thân thiện.",
+    "origin": "Canada.",
+    "personality": "Thân thiện, năng động, thích gần người, rất quấn chủ.",
+    "care": "Tắm thường xuyên, giữ ấm cơ thể, vệ sinh tai và móng.",
+    "appearance": "Thân hình cơ bắp, da nhăn, không lông hoặc có lông tơ, tai lớn, mắt to.",
+    "health": "Tuổi thọ 9-15 năm, dễ bị các bệnh về da, tim, răng miệng.",
+    "fun_fact": "Sphynx thích nằm gần nguồn nhiệt và thường chui vào chăn ngủ cùng chủ."
+  },
+  "Chartreux": {
+    "description": "Mèo Pháp lông xám xanh, thân chắc khỏe, nổi tiếng với nụ cười nhẹ trên gương mặt.",
+    "origin": "Pháp.",
+    "personality": "Yên tĩnh, trung thành, dễ gần, thích quan sát.",
+    "care": "Chải lông định kỳ, kiểm tra sức khỏe răng miệng.",
+    "appearance": "Thân hình trung bình đến lớn, cơ bắp, đầu tròn, mắt vàng đồng, lông xám xanh dày.",
+    "health": "Tuổi thọ 12-15 năm, dễ gặp bệnh về răng, thận.",
+    "fun_fact": "Chartreux từng được các tu sĩ Pháp nuôi để bắt chuột trong tu viện."
+  },
+  "Chinchilla": {
+    "description": "Biến thể của mèo Ba Tư với lông trắng bạc, mắt xanh hoặc xanh ngọc.",
+    "origin": "Anh.",
+    "personality": "Hiền lành, điềm tĩnh, thân thiện.",
+    "care": "Chải lông hàng ngày, vệ sinh mắt mũi.",
+    "appearance": "Thân hình lớn, lông dài trắng bạc, mắt xanh to tròn, mặt tròn, mũi tẹt.",
+    "health": "Dễ gặp bệnh về mắt, hô hấp, răng miệng, tuổi thọ 12-15 năm.",
+    "fun_fact": "Chinchilla từng là giống mèo cưng của nhiều hoàng gia châu Âu."
+  },
+  "Egyptian Mau": {
+    "description": "Mèo Ai Cập cổ đại, nổi bật với bộ lông đốm tự nhiên và tốc độ chạy cực nhanh.",
+    "origin": "Ai Cập.",
+    "personality": "Nhanh nhẹn, trung thành, cảnh giác nhưng thân thiện với người quen.",
+    "care": "Chải lông định kỳ, cần nhiều vận động.",
+    "appearance": "Thân hình săn chắc, chân dài, lông ngắn đốm tự nhiên, mắt xanh ngọc, đuôi dài.",
+    "health": "Khá khỏe mạnh, dễ gặp bệnh về tim, răng miệng, tuổi thọ 12-16 năm.",
+    "fun_fact": "Egyptian Mau là giống mèo nhà chạy nhanh nhất thế giới, có thể đạt 48 km/h."
+  },
+  "Exotic Shorthair": {
+    "description": "Mèo Ba Tư lông ngắn, mặt tròn, mũi tẹt, tính cách hiền lành.",
+    "origin": "Mỹ.",
+    "personality": "Điềm tĩnh, thân thiện, thích gần gũi chủ.",
+    "care": "Chải lông thường xuyên, vệ sinh mắt mũi.",
+    "appearance": "Thân hình mập, đầu tròn, mắt to, lông ngắn dày, mặt mũi tẹt.",
+    "health": "Dễ gặp bệnh về hô hấp, mắt, răng miệng, tuổi thọ 12-15 năm.",
+    "fun_fact": "Exotic Shorthair được mệnh danh là 'mèo Ba Tư lười biếng' vì lông ngắn dễ chăm sóc hơn."
+  },
+  "Havana Brown": {
+    "description": "Mèo lông nâu socola, mắt xanh ngọc, thân hình chắc khỏe.",
+    "origin": "Anh.",
+    "personality": "Tò mò, thân thiện, thích giao tiếp, quấn quýt chủ.",
+    "care": "Chải lông định kỳ, cần nhiều sự quan tâm.",
+    "appearance": "Thân hình trung bình, lông ngắn màu nâu socola, mắt xanh ngọc, đầu dài.",
+    "health": "Tuổi thọ 12-15 năm, dễ gặp bệnh về răng, thận.",
+    "fun_fact": "Havana Brown là giống mèo duy nhất có màu lông socola đồng nhất."
+  },
+  "Japanese Bobtail": {
+    "description": "Mèo đuôi ngắn đặc trưng, biểu tượng may mắn ở Nhật Bản.",
+    "origin": "Nhật Bản.",
+    "personality": "Hoạt bát, thông minh, thân thiện, thích chơi đùa.",
+    "care": "Chải lông định kỳ, cần nhiều vận động.",
+    "appearance": "Thân hình nhỏ nhắn, đuôi ngắn như bông, mắt to, lông ngắn hoặc dài nhiều màu.",
+    "health": "Khá khỏe mạnh, tuổi thọ 9-15 năm, ít bệnh di truyền.",
+    "fun_fact": "Mèo thần tài Maneki Neko của Nhật thường lấy cảm hứng từ Japanese Bobtail."
+  },
+  "Khao Manee": {
+    "description": "Mèo Thái lông trắng, mắt xanh hoặc hai màu, được xem là mèo quý hiếm.",
+    "origin": "Thái Lan.",
+    "personality": "Tò mò, tình cảm, thông minh, thân thiện.",
+    "care": "Chải lông định kỳ, kiểm tra mắt thường xuyên.",
+    "appearance": "Thân hình thon gọn, lông trắng tinh, mắt xanh, vàng hoặc hai màu.",
+    "health": "Dễ bị điếc ở mèo mắt xanh, tuổi thọ 10-15 năm.",
+    "fun_fact": "Khao Manee từng là mèo cưng của hoàng gia Thái Lan, được gọi là 'viên ngọc trắng'."
+  },
+  "LaPerm": {
+    "description": "Mèo lông xoăn tự nhiên, thân thiện, vui vẻ, thích chơi đùa.",
+    "origin": "Mỹ.",
+    "personality": "Vui vẻ, thân thiện, thích chơi, quấn chủ.",
+    "care": "Chải lông nhẹ nhàng, kiểm tra da lông.",
+    "appearance": "Thân hình nhỏ đến trung bình, lông xoăn tự nhiên, nhiều màu sắc.",
+    "health": "Khá khỏe mạnh, tuổi thọ 10-15 năm.",
+    "fun_fact": "Lông LaPerm có thể thay đổi từ thẳng sang xoăn và ngược lại trong suốt cuộc đời."
+  },
+  "Lykoi": {
+    "description": "Mèo 'sói', lông thưa, ngoại hình hoang dã, rất hiếm.",
+    "origin": "Mỹ.",
+    "personality": "Tò mò, thân thiện, thích khám phá.",
+    "care": "Chải lông nhẹ nhàng, chú ý da lông.",
+    "appearance": "Thân hình nhỏ, lông thưa, mặt nhọn, mắt vàng, trông giống sói nhỏ.",
+    "health": "Dễ bị bệnh da, tuổi thọ 12-15 năm.",
+    "fun_fact": "Lykoi là giống mèo duy nhất có ngoại hình giống sói tự nhiên do đột biến gen."
+  },
+  "Maine Coon": {
+    "description": "Mèo lớn nhất trong các giống mèo nhà, lông dài, đuôi xù, thân thiện.",
+    "origin": "Mỹ.",
+    "personality": "Hiền lành, hòa đồng, thích chơi, thân thiện với trẻ nhỏ.",
+    "care": "Chải lông thường xuyên, cần không gian rộng.",
+    "appearance": "Thân hình lớn, cơ bắp, lông dài dày, đuôi xù, tai có chùm lông.",
+    "health": "Tuổi thọ 12-15 năm, dễ bị bệnh cơ tim phì đại, loạn sản hông.",
+    "fun_fact": "Maine Coon có thể đạt cân nặng trên 10kg, là giống mèo nhà lớn nhất thế giới."
+  },
+  "Manx": {
+    "description": "Mèo đuôi cụt hoặc rất ngắn, thân hình chắc khỏe, nổi tiếng ở đảo Man.",
+    "origin": "Đảo Man (Anh).",
+    "personality": "Thân thiện, trung thành, thích chơi, cảnh giác với người lạ.",
+    "care": "Chải lông định kỳ, kiểm tra cột sống.",
+    "appearance": "Thân hình tròn, cơ bắp, chân sau dài hơn chân trước, đuôi cụt hoặc ngắn.",
+    "health": "Dễ bị dị tật cột sống do gen đuôi cụt, tuổi thọ 9-14 năm.",
+    "fun_fact": "Manx có thể nhảy rất cao nhờ chân sau phát triển hơn bình thường."
+  },
+  "Munchkin": {
+    "description": "Mèo chân ngắn tự nhiên, nhỏ nhắn, hoạt bát, rất đáng yêu.",
+    "origin": "Mỹ.",
+    "personality": "Hiếu động, thân thiện, thích chơi, dễ gần.",
+    "care": "Chải lông định kỳ, chú ý xương khớp.",
+    "appearance": "Thân hình nhỏ, chân ngắn, lông ngắn hoặc dài nhiều màu.",
+    "health": "Có thể gặp vấn đề về xương khớp, tuổi thọ 12-15 năm.",
+    "fun_fact": "Munchkin được mệnh danh là 'mèo lùn' và có thể chạy rất nhanh dù chân ngắn."
+  },
+  "Norwegian Forest Cat": {
+    "description": "Mèo rừng Na Uy, lông dày chống lạnh, thân hình lớn, thích leo trèo.",
+    "origin": "Na Uy.",
+    "personality": "Độc lập, thân thiện, thích leo trèo, cảnh giác với người lạ.",
+    "care": "Chải lông thường xuyên, cần không gian vận động.",
+    "appearance": "Thân hình lớn, lông dài dày, đuôi xù, tai có chùm lông.",
+    "health": "Tuổi thọ 12-16 năm, dễ gặp bệnh về tim, thận.",
+    "fun_fact": "Norwegian Forest Cat từng xuất hiện trong thần thoại Bắc Âu với tên gọi 'mèo của thần Freya'."
+  },
+  "Ocicat": {
+    "description": "Mèo nhà lông đốm như mèo hoang, không mang gen hoang dã.",
+    "origin": "Mỹ.",
+    "personality": "Thân thiện, năng động, thông minh, thích chơi.",
+    "care": "Chải lông định kỳ, cần nhiều vận động.",
+    "appearance": "Thân hình trung bình, cơ bắp, lông ngắn đốm tròn đều, mắt to.",
+    "health": "Khá khỏe mạnh, tuổi thọ 12-18 năm.",
+    "fun_fact": "Ocicat là giống mèo nhà duy nhất có bộ lông đốm tự nhiên mà không lai với mèo hoang."
+  },
+  "Persian": {
+    "description": "Mèo lông dài nổi tiếng, mặt tròn, mũi tẹt, tính cách điềm tĩnh.",
+    "origin": "Iran (Ba Tư).",
+    "personality": "Điềm tĩnh, hiền lành, thích yên tĩnh, thân thiện.",
+    "care": "Chải lông hàng ngày, vệ sinh mắt mũi.",
+    "appearance": "Thân hình lớn, lông dài dày, mặt tròn, mũi tẹt, mắt to.",
+    "health": "Dễ bị bệnh về mắt, hô hấp, thận, tuổi thọ 12-17 năm.",
+    "fun_fact": "Persian là giống mèo được nuôi phổ biến nhất thế giới trong nhiều thập kỷ."
+  },
+  "Scottish Fold": {
+    "description": "Mèo tai cụp đặc trưng, thân hình chắc khỏe, tính cách hiền lành.",
+    "origin": "Scotland.",
+    "personality": "Hiền lành, thân thiện, thích chơi, dễ gần.",
+    "care": "Chải lông định kỳ, chú ý vấn đề xương khớp.",
+    "appearance": "Thân hình tròn, tai cụp về phía trước, mắt to tròn, lông ngắn hoặc dài.",
+    "health": "Dễ bị bệnh xương khớp do gen tai cụp, tuổi thọ 11-15 năm.",
+    "fun_fact": "Tất cả Scottish Fold đều mang gen tai cụp trội, nhưng chỉ nên lai với mèo tai thẳng để tránh dị tật."
+  },
+  "Selkirk Rex": {
+    "description": "Mèo lông xoăn tự nhiên, thân hình to lớn, tính cách hiền lành.",
+    "origin": "Mỹ.",
+    "personality": "Hiền lành, vui vẻ, dễ gần, thích được vuốt ve.",
+    "care": "Chải lông nhẹ nhàng, kiểm tra da lông.",
+    "appearance": "Thân hình lớn, lông xoăn tự nhiên, mặt tròn, mắt to.",
+    "health": "Dễ bị bệnh về răng, thận, tuổi thọ 12-15 năm.",
+    "fun_fact": "Selkirk Rex là một trong ba giống mèo lông xoăn tự nhiên trên thế giới."
+  },
+  "Singapura": {
+    "description": "Mèo nhỏ nhất thế giới, lông ngắn màu sepia, tính cách hoạt bát.",
+    "origin": "Singapore.",
+    "personality": "Hoạt bát, tò mò, thân thiện, thích leo trèo.",
+    "care": "Chải lông định kỳ, cần nhiều tương tác.",
+    "appearance": "Thân hình nhỏ, lông ngắn màu nâu vàng nhạt, mắt to xanh hoặc vàng.",
+    "health": "Khá khỏe mạnh, tuổi thọ 11-15 năm.",
+    "fun_fact": "Singapura thường chỉ nặng 2-3kg khi trưởng thành, là giống mèo nhỏ nhất thế giới."
+  },
+  "Toyger": {
+    "description": "Mèo nhà lông vằn như hổ nhỏ, thân hình cơ bắp, năng động.",
+    "origin": "Mỹ.",
+    "personality": "Thân thiện, năng động, thông minh, thích chơi.",
+    "care": "Chải lông định kỳ, cần nhiều vận động.",
+    "appearance": "Thân hình trung bình, cơ bắp, lông ngắn vằn cam đen như hổ, mắt tròn.",
+    "health": "Khá khỏe mạnh, tuổi thọ 12-15 năm.",
+    "fun_fact": "Toyger được lai tạo để trông giống hổ con, nhưng hoàn toàn là mèo nhà."
+  }
+}

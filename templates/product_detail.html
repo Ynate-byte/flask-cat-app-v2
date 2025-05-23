@@ -1,0 +1,101 @@
+{% extends "base_layout.html" %}
+
+{% block title %}{{ product.name }} - PetShop{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="{{ url_for(product.category_slug) }}">{{ product.category_slug | capitalize }}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='Image/' + product.image) }}" class="img-fluid rounded shadow-lg mb-4" alt="{{ product.name }}" style="max-height: 450px; object-fit: contain; border: 3px solid var(--primary-color);">
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-5 text-primary">{{ product.name }}</h1>
+            <p class="lead text-success my-3" style="font-size: 2rem; font-weight: bold;">{{ "{:,.0f}".format(product.price) }} Đ</p>
+            
+            <p><strong>Mô tả:</strong> {{ product.description if product.description is defined else 'Không có mô tả chi tiết.' }}</p>
+            
+            <h5 class="mt-4">Thông tin thêm:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-box me-2 text-muted"></i><strong>Danh mục:</strong> {{ product.category_slug | capitalize }}</li>
+                {% if product.brand is defined %}<li class="list-group-item"><i class="fas fa-tag me-2 text-muted"></i><strong>Thương hiệu:</strong> {{ product.brand }}</li>{% endif %}
+                {% if product.weight is defined %}<li class="list-group-item"><i class="fas fa-weight-hanging me-2 text-muted"></i><strong>Khối lượng:</strong> {{ product.weight }}</li>{% endif %}
+                {% if product.age_group is defined %}<li class="list-group-item"><i class="fas fa-baby-carriage me-2 text-muted"></i><strong>Độ tuổi phù hợp:</strong> {{ product.age_group }}</li>{% endif %}
+                {% if product.features is defined %}
+                <li class="list-group-item">
+                    <i class="fas fa-star me-2 text-muted"></i><strong>Tính năng:</strong>
+                    {% for feature in product.features %}
+                        <span class="badge bg-info text-dark me-1">{{ feature }}</span>
+                    {% endfor %}
+                </li>
+                {% endif %}
+                </ul>
+
+            <div class="d-flex align-items-center mt-4">
+                <input type="number" id="product-quantity" class="form-control me-3" value="1" min="1" style="width: 80px;">
+                <button class="add-to-cart btn btn-primary btn-lg" 
+                        data-product-name="{{ product.name }}" 
+                        data-product-price="{{ product.price }}" 
+                        data-product-image="{{ url_for('static', filename='Image/' + product.image) }}">
+                    <i class="fas fa-cart-plus me-2"></i>Thêm vào giỏ
+                </button>
+            </div>
+            
+            <hr class="my-4">
+            <h5><i class="fas fa-info-circle me-2"></i>Thông tin thêm</h5>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle text-success me-2"></i> Sản phẩm chất lượng cao</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Giao hàng nhanh chóng</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Hỗ trợ khách hàng 24/7</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for(product.category_slug) }}" class="btn btn-outline-secondary btn-lg"><i class="fas fa-arrow-left me-2"></i>Quay lại danh mục {{ product.category_slug | capitalize }}</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary btn-lg ms-3"><i class="fas fa-home me-2"></i>Về trang chủ</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartBtn = document.querySelector('.add-to-cart.btn');
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', function() {
+                const name = this.dataset.productName;
+                const price = parseInt(this.dataset.productPrice);
+                const image = this.dataset.productImage;
+                // Lấy số lượng từ input
+                const quantity = parseInt(document.getElementById('product-quantity').value) || 1;
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const existingItem = cart.find(item => item.name === name);
+
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    cart.push({ name, price, image, quantity });
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                // Gọi hàm cập nhật giỏ hàng từ base_layout nếu tồn tại (để cập nhật số lượng trên header)
+                if (typeof updateCartCount === 'function') {
+                    updateCartCount();
+                }
+                if (typeof showToast === 'function') {
+                    showToast(`Đã thêm ${quantity} "${name}" vào giỏ hàng!`, 'success');
+                } else {
+                    alert(`Đã thêm ${quantity} "${name}" vào giỏ hàng!`);
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

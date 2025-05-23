@@ -1,0 +1,142 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Đồ chơi cho mèo - PetShop{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <img src="{{ url_for('static', filename='Image/cate4_banner.webp') }}" alt="banner" class="banner-img">
+    </section>      
+     <div class="container my-5">
+        <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">TRANG CHỦ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ category_name | capitalize }} cho mèo</li>
+            </ol>
+        </nav>
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-filter me-2"></i> 
+                <strong>XEM SẢN PHẨM THEO GIÁ</strong>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="me-3 text-muted">Hiển thị 1–<span id="product-count-current">{{ products|length }}</span> của <span id="product-count-total">{{ total_products }}</span> kết quả</span>
+                <select id="sort-select" class="form-select" style="width: 200px;">
+                    <option value="popular" {% if current_sort == 'popular' %}selected{% endif %}>Mới nhất</option>
+                    <option value="price_asc" {% if current_sort == 'price_asc' %}selected{% endif %}>Giá: Thấp đến Cao</option>
+                    <option value="price_desc" {% if current_sort == 'price_desc' %}selected{% endif %}>Giá: Cao đến Thấp</option>
+                    <option value="name_asc" {% if current_sort == 'name_asc' %}selected{% endif %}>Tên: A → Z</option>
+                    <option value="name_desc" {% if current_sort == 'name_desc' %}selected{% endif %}>Tên: Z → A</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="products-list-container" class="products-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <a href="{{ url_for('product_detail', category_name=category_name, product_index=loop.index0) }}" class="text-decoration-none text-dark">
+                    <img src="{{ url_for('static', filename='Image/' + product.image) }}" alt="{{ product.name }}">
+                    <h4 class="product-name">{{ product.name }}</h4>
+                </a>
+                <p class="product-price">{{ "{:,.0f}".format(product.price) }} Đ</p>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            {% else %}
+            <p class="text-center text-muted" id="no-products-message">Không có sản phẩm đồ chơi nào để hiển thị.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryName = "{{ category_name }}"; // Lấy tên danh mục hiện tại
+            const sortSelect = document.getElementById('sort-select');
+            const productsListContainer = document.getElementById('products-list-container');
+            const productCountCurrent = document.getElementById('product-count-current');
+            const productCountTotal = document.getElementById('product-count-total');
+            const noProductsMessage = document.getElementById('no-products-message');
+
+            // Hàm render một sản phẩm thành HTML
+            function renderProductCard(product) {
+                const productUrl = "{{ url_for('product_detail', category_name='PLACEHOLDER_CAT', product_index=0) }}"
+                                .replace('PLACEHOLDER_CAT', product.category_slug)
+                                .replace('0', product.index);
+                const imageUrl = "{{ url_for('static', filename='Image/PLACEHOLDER_IMG') }}".replace('PLACEHOLDER_IMG', product.image);
+                const formattedPrice = new Intl.NumberFormat('vi-VN').format(product.price) + ' Đ';
+
+                return `
+                    <div class="product-card">
+                        <a href="${productUrl}" class="text-decoration-none text-dark">
+                            <img src="${imageUrl}" alt="${product.name}">
+                            <h4 class="product-name">${product.name}</h4>
+                        </a>
+                        <p class="product-price">${formattedPrice}</p>
+                        <button class="add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                `;
+            }
+
+            // Hàm để fetch dữ liệu và cập nhật grid
+            function fetchAndRenderProducts(sortBy) {
+                const category = "{{ category_name }}";
+                const apiUrl = `/api/products/${category}?sort_by=${sortBy}`;
+
+                // --- BẮT ĐẦU CẢI THIỆN HIỆU ỨNG GIẬT ---
+                // 1. Lưu chiều cao hiện tại và đặt làm min-height
+                const currentHeight = productsListContainer.offsetHeight;
+                productsListContainer.style.minHeight = `${currentHeight}px`;
+                productsListContainer.style.opacity = '0.5'; // Làm mờ nhẹ trong khi tải
+                productsListContainer.style.pointerEvents = 'none'; // Vô hiệu hóa click
+
+                // 2. Hiển thị loading spinner bên trong (hoặc overlay)
+                productsListContainer.innerHTML = '<div class="text-center w-100 py-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Đang tải...</span></div></div>';
+                if (noProductsMessage) noProductsMessage.style.display = 'none';
+
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        productsListContainer.innerHTML = ''; // Xóa sản phẩm cũ
+                        if (data.products && data.products.length > 0) {
+                            data.products.forEach(product => {
+                                productsListContainer.insertAdjacentHTML('beforeend', renderProductCard(product));
+                            });
+                            // Gắn lại sự kiện "Thêm vào giỏ" cho các nút mới
+                            document.querySelectorAll(".add-to-cart").forEach(button => {
+                                button.addEventListener("click", function () {
+                                    const product = this.closest('.product-card');
+                                    // Hàm addToCartFromElement được định nghĩa ở base_layout.html
+                                    if (typeof addToCartFromElement === 'function') {
+                                        addToCartFromElement(product);
+                                    }
+                                });
+                            });
+                        } else {
+                            productsListContainer.innerHTML = '<p class="text-center text-muted w-100">Không có sản phẩm nào để hiển thị.</p>';
+                            if (noProductsMessage) noProductsMessage.style.display = 'block';
+                        }
+                        // Cập nhật hiển thị số lượng
+                        productCountCurrent.textContent = data.products ? data.products.length : 0;
+                        productCountTotal.textContent = data.total_products;
+                    })
+                    .catch(error => {
+                        console.error('Lỗi khi tải sản phẩm:', error);
+                        productsListContainer.innerHTML = '<p class="text-center text-danger w-100">Có lỗi khi tải sản phẩm.</p>';
+                        productCountCurrent.textContent = 0;
+                        productCountTotal.textContent = 0;
+                    })
+                    .finally(() => {
+                        // --- KẾT THÚC CẢI THIỆN HIỆU ỨNG GIẬT ---
+                        // 3. Xóa min-height và reset opacity/pointer-events
+                        productsListContainer.style.minHeight = '';
+                        productsListContainer.style.opacity = '1';
+                        productsListContainer.style.pointerEvents = 'auto';
+                    });
+            }
+
+            // Gắn sự kiện change cho dropdown sắp xếp
+            sortSelect.addEventListener('change', function() {
+                fetchAndRenderProducts(this.value);
+            });
+        });
+    </script>
+{% endblock %}

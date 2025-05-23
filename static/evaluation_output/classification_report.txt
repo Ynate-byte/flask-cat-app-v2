@@ -1,0 +1,37 @@
+                      precision    recall  f1-score   support
+
+          Abyssinian       0.93      0.98      0.96        55
+  American Shorthair       0.90      0.86      0.88        73
+   American Wirehair       0.93      0.93      0.93        59
+   Applehead Siamese       0.89      0.89      0.89        64
+            Balinese       0.92      0.87      0.89        68
+              Bengal       0.93      0.84      0.88        74
+              Bombay       0.97      0.95      0.96        65
+   British Shorthair       0.84      0.85      0.84        73
+             Burmese       0.94      0.95      0.94        61
+            Burmilla       0.85      0.94      0.90        68
+              Calico       0.95      0.93      0.94        58
+   Canadian Hairless       0.97      1.00      0.99        75
+           Chartreux       0.84      0.94      0.89        62
+          Chinchilla       0.82      0.83      0.83        72
+        Egyptian Mau       0.92      0.93      0.93        61
+    Exotic Shorthair       0.96      0.96      0.96        69
+        Havana Brown       1.00      0.95      0.98        66
+    Japanese Bobtail       0.92      0.90      0.91        52
+          Khao Manee       0.93      0.95      0.94        66
+              LaPerm       0.97      0.87      0.91        68
+               Lykoi       0.93      1.00      0.97        43
+          Maine Coon       0.93      0.98      0.95        43
+                Manx       0.98      0.95      0.96        57
+            Munchkin       0.93      0.77      0.84        88
+Norwegian Forest Cat       0.90      0.95      0.93        86
+              Ocicat       0.87      0.90      0.89        69
+             Persian       0.82      0.85      0.83        85
+       Scottish Fold       0.93      0.96      0.95        85
+         Selkirk Rex       0.94      0.96      0.95        68
+           Singapura       0.91      0.83      0.87        76
+              Toyger       0.82      0.91      0.86        66
+
+            accuracy                           0.91      2075
+           macro avg       0.91      0.92      0.91      2075
+        weighted avg       0.91      0.91      0.91      2075

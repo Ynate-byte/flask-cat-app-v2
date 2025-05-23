@@ -1,0 +1,251 @@
+{
+  "food": [
+    {
+      "name": "Thức ăn hạt Whiskas hương vị cá thu",
+      "price": 100000,
+      "image": "1.jpg",
+      "description": "Thức ăn hạt Whiskas hương vị cá thu thơm ngon, dành cho mèo trưởng thành trên 1 tuổi. Công thức dinh dưỡng cân bằng giúp hỗ trợ hệ tiêu hóa khỏe mạnh và bộ lông óng mượt. Giúp kiểm soát búi lông và tăng cường sức đề kháng.",
+      "brand": "Whiskas",
+      "weight": "480g",
+      "age_group": "Mèo trưởng thành (1+ tuổi)",
+      "features": ["Hương vị cá thu hấp dẫn", "Hỗ trợ tiêu hóa", "Lông khỏe mạnh", "Kiểm soát búi lông"],
+      "ingredients": "Ngũ cốc, thịt và sản phẩm từ thịt, cá, chất béo động vật, vitamin và khoáng chất."
+    },
+    {
+      "name": "Thức ăn khô Royal Canin Kitten",
+      "price": 150000,
+      "image": "2.jpg",
+      "description": "Thức ăn khô Royal Canin dành riêng cho mèo con, hỗ trợ sự phát triển toàn diện của hệ miễn dịch, xương và cơ bắp. Hạt nhỏ được thiết kế đặc biệt giúp mèo con dễ dàng ăn và nhai. Công thức giàu protein và chất chống oxy hóa.",
+      "brand": "Royal Canin",
+      "weight": "400g",
+      "age_group": "Mèo con (dưới 12 tháng)",
+      "features": ["Phát triển toàn diện", "Tăng cường miễn dịch", "Hạt nhỏ dễ ăn", "Giàu protein"],
+      "ingredients": "Protein gia cầm, gạo, protein thực vật, ngô, mỡ động vật, men, dầu cá, dầu đậu nành."
+    },
+    {
+      "name": "Thức ăn hạt cao cấp cho mèo mọi lứa tuổi",
+      "price": 130000,
+      "image": "3.jpg",
+      "description": "Thức ăn hạt cao cấp với công thức đặc biệt, giàu protein từ thịt tươi (gà, cá hồi), vitamin và khoáng chất thiết yếu, giúp mèo duy trì năng lượng và sức khỏe tối ưu. Phù hợp cho mèo ở mọi giai đoạn phát triển.",
+      "brand": "ProPet Master",
+      "weight": "1kg",
+      "age_group": "Mèo mọi lứa tuổi",
+      "features": ["Giàu protein từ thịt tươi", "Vitamin và khoáng chất", "Công thức cân bằng dinh dưỡng", "Không chất độn"],
+      "ingredients": "Thịt gà, cá hồi, gạo lứt, khoai tây, rau củ quả, dầu cá, taurine."
+    },
+    {
+      "name": "Pate thức ăn ướt vị cá ngừ Fancy Feast",
+      "price": 180000,
+      "image": "4.webp",
+      "description": "Pate thức ăn ướt vị cá ngừ thơm ngon, cung cấp độ ẩm cần thiết và kích thích vị giác của mèo. Món ăn bổ dưỡng này giúp mèo duy trì sức khỏe đường tiết niệu và bộ lông sáng bóng. Đóng gói tiện lợi, dễ dàng chia khẩu phần.",
+      "brand": "Fancy Feast",
+      "weight": "85g x 12 gói",
+      "age_group": "Mèo trưởng thành",
+      "features": ["Giàu độ ẩm", "Vị cá ngừ tự nhiên", "Kích thích vị giác", "Hỗ trợ đường tiết niệu"],
+      "ingredients": "Cá ngừ, nước dùng, thịt gà, khoáng chất, vitamin."
+    },
+    {
+      "name": "Thức ăn cho mèo con Purina Pro Plan",
+      "price": 210000,
+      "image": "5.webp",
+      "description": "Thức ăn khô Purina Pro Plan công thức đặc biệt dành cho mèo con, hỗ trợ phát triển não bộ và thị lực với DHA. Giúp hệ xương chắc khỏe và tăng cường miễn dịch từ sữa non. Hạt giòn ngon, dễ tiêu hóa.",
+      "brand": "Purina Pro Plan",
+      "weight": "1.5kg",
+      "age_group": "Mèo con (dưới 12 tháng)",
+      "features": ["Hỗ trợ não bộ và thị lực (DHA)", "Xương chắc khỏe", "Tăng cường miễn dịch", "Dễ tiêu hóa"],
+      "ingredients": "Thịt gà, gạo, bột bắp, mỡ gia cầm, dầu cá, sữa non, vitamin và khoáng chất."
+    },
+    {
+      "name": "Thức ăn khô Hill's Science Diet kiểm soát cân nặng",
+      "price": 200000,
+      "image": "6.jpg",
+      "description": "Thức ăn khô với công thức kiểm soát cân nặng, giúp mèo lớn tuổi hoặc ít vận động duy trì vóc dáng lý tưởng. Giàu chất xơ, hỗ trợ tiêu hóa và giảm tích tụ búi lông. Hương vị thơm ngon dễ ăn.",
+      "brand": "Hill's Science Diet",
+      "weight": "2kg",
+      "age_group": "Mèo lớn (7+ tuổi)",
+      "features": ["Kiểm soát cân nặng", "Giàu chất xơ", "Hỗ trợ tiêu hóa", "Giảm búi lông"],
+      "ingredients": "Thịt gà, lúa mì, bắp, bột ngô gluten, gạo, chất xơ thực vật, dầu thực vật, vitamin và khoáng chất."
+    },
+    {
+      "name": "Thức ăn bổ sung dinh dưỡng tổng hợp VetriScience",
+      "price": 160000,
+      "image": "7.jpg",
+      "description": "Thức ăn bổ sung dạng hạt mềm, cung cấp vitamin và khoáng chất tổng hợp, giúp tăng cường sức đề kháng và phục hồi sức khỏe cho mèo sau ốm hoặc thiếu chất. Có hương vị hấp dẫn, dễ dàng cho mèo ăn.",
+      "brand": "VetriScience",
+      "weight": "200g",
+      "age_group": "Mèo mọi lứa tuổi",
+      "features": ["Vitamin và khoáng chất tổng hợp", "Tăng cường sức đề kháng", "Phục hồi sức khỏe", "Hương vị hấp dẫn"],
+      "ingredients": "Vitamin A, B, C, D, E, K, khoáng chất (sắt, kẽm, đồng), axit amin, men bia."
+    },
+    {
+      "name": "Snack thưởng cá hồi sấy khô Mera",
+      "price": 105000,
+      "image": "8.webp",
+      "description": "Snack thưởng cá hồi sấy khô nguyên chất, thơm ngon và bổ dưỡng, giúp mèo vui vẻ và là phần thưởng tuyệt vời cho buổi huấn luyện. Giàu Omega 3 & 6, tốt cho da và lông.",
+      "brand": "Mera",
+      "weight": "50g",
+      "age_group": "Mèo mọi lứa tuổi",
+      "features": ["Cá hồi nguyên chất", "Giàu Omega 3 & 6", "Tốt cho da và lông", "Không chất bảo quản"],
+      "ingredients": "Cá hồi sấy khô 100%."
+    }
+  ],
+  "toy": [
+    {
+      "name": "Bộ 5 quả bóng lông mèo mềm mại",
+      "price": 100000,
+      "image": "101.jpg",
+      "description": "Bộ 5 quả bóng lông mềm mại, nhiều màu sắc, an toàn cho mèo chơi đùa, giúp kích thích bản năng săn mồi và vận động. Dễ dàng lăn và nảy, thu hút sự chú ý của mèo.",
+      "brand": "Catnip Toy Co.",
+      "material": "Lông nhân tạo, nhựa",
+      "size": "Đường kính 4cm mỗi quả",
+      "features": ["Mềm mại", "An toàn", "Kích thích vận động", "Nhiều màu sắc"]
+    },
+    {
+      "name": "Cần câu mèo gắn lông vũ tự nhiên",
+      "price": 150000,
+      "image": "102.jpg",
+      "description": "Cần câu mèo bền bỉ với lông vũ tự nhiên và chuông nhỏ, giúp tương tác với mèo, kích thích bản năng săn mồi và tăng cường mối quan hệ với chủ. Cần dài giúp chủ dễ dàng điều khiển.",
+      "brand": "Pet Interactive",
+      "material": "Nhựa, lông vũ tự nhiên",
+      "size": "Dài 50cm",
+      "features": ["Tương tác cao", "Lông vũ tự nhiên", "Bền bỉ", "Có chuông"]
+    },
+    {
+      "name": "Tháp bóng 3 tầng tương tác",
+      "price": 130000,
+      "image": "103.jpg",
+      "description": "Tháp bóng 3 tầng với các quả bóng di chuyển độc lập trong từng tầng, thu hút sự chú ý của mèo, giúp mèo giải trí và vận động. Thiết kế chắc chắn, chống trượt, dễ dàng vệ sinh.",
+      "brand": "PetFun",
+      "material": "Nhựa ABS",
+      "size": "Cao 25cm, Đường kính 20cm",
+      "features": ["3 tầng", "Bóng di chuyển", "Giải trí", "Chắc chắn"]
+    },
+    {
+      "name": "Đồ chơi laser cho mèo tự động",
+      "price": 180000,
+      "image": "104.webp",
+      "description": "Đồ chơi laser tự động với nhiều chế độ di chuyển ngẫu nhiên, kích thích mèo đuổi bắt, giúp mèo vận động trong nhà. Có thể điều chỉnh tốc độ, an toàn cho mắt mèo.",
+      "brand": "LaserPet",
+      "material": "Nhựa",
+      "features": ["Tự động", "Nhiều chế độ", "Kích thích vận động", "An toàn cho mắt"]
+    },
+    {
+      "name": "Chuột đồ chơi vải lông có chuông",
+      "price": 210000,
+      "image": "105.jpg",
+      "description": "Chuột đồ chơi vải lông mềm mại có gắn chuông bên trong, tạo âm thanh vui tai, thu hút mèo chơi đùa. Chất liệu an toàn, không độc hại, kích thích bản năng săn mồi tự nhiên.",
+      "brand": "KittyPlay",
+      "material": "Vải lông, chuông",
+      "size": "Dài 10cm",
+      "features": ["Có tiếng chuông", "Vải lông mềm", "Kích thích thính giác", "An toàn"]
+    },
+    {
+      "name": "Đồ chơi banh len đan thủ công",
+      "price": 200000,
+      "image": "106.png",
+      "description": "Banh len đan thủ công, mềm mại và bền chắc, an toàn cho mèo cắn xé và chơi đùa. Thiết kế nhẹ, dễ dàng lăn và ném, giúp mèo giải tỏa căng thẳng.",
+      "brand": "Handmade Pet",
+      "material": "Len tự nhiên",
+      "size": "Đường kính 6cm",
+      "features": ["Thủ công", "Mềm mại", "Bền chắc", "Giảm căng thẳng"]
+    },
+    {
+      "name": "Đồ chơi cá điện tử chuyển động",
+      "price": 160000,
+      "image": "107.jpg",
+      "description": "Đồ chơi cá điện tử mô phỏng chuyển động của cá thật, sạc USB tiện lợi, giúp mèo giải trí hàng giờ. Có thể tháo rời phần điện tử để vệ sinh hoặc thêm cỏ mèo bên trong.",
+      "brand": "AquaPlay",
+      "material": "Vải, linh kiện điện tử",
+      "features": ["Mô phỏng cá thật", "Sạc USB", "Có thể thêm cỏ mèo", "Dễ vệ sinh"]
+    },
+    {
+      "name": "Đồ chơi hình chim có tiếng kêu",
+      "price": 105000,
+      "image": "108.jpg",
+      "description": "Đồ chơi hình chim với tiếng kêu mô phỏng tiếng chim hót, kích thích bản năng săn mồi của mèo. Vải mềm, an toàn, dễ dàng mang đi và treo ở nhiều vị trí.",
+      "brand": "SoundToy",
+      "material": "Vải, linh kiện phát âm thanh",
+      "features": ["Tiếng kêu mô phỏng", "Kích thích bản năng", "Nhỏ gọn", "Dễ treo"]
+    }
+  ],
+  "accessory": [
+    {
+      "name": "Bát ăn đôi chống trượt bằng thép không gỉ",
+      "price": 100000,
+      "image": "201.webp",
+      "description": "Bát ăn đôi bằng thép không gỉ cao cấp, có đế chống trượt, dễ vệ sinh và an toàn cho thú cưng. Thích hợp cho cả thức ăn và nước uống. Thiết kế hiện đại, bền bỉ.",
+      "brand": "PetBowl",
+      "material": "Thép không gỉ, silicon",
+      "size": "2 x 350ml",
+      "features": ["Chống trượt", "Dễ vệ sinh", "Chất liệu cao cấp", "Thiết kế hiện đại"]
+    },
+    {
+      "name": "Vòng cổ mèo da mềm có chuông",
+      "price": 150000,
+      "image": "202.webp",
+      "description": "Vòng cổ cho mèo bằng da mềm, thiết kế an toàn với khóa cài nhanh và chuông nhỏ xinh, giúp bạn dễ dàng theo dõi mèo của mình. Có thể điều chỉnh kích thước để phù hợp.",
+      "brand": "CollarStyle",
+      "material": "Da PU, kim loại",
+      "size": "Có thể điều chỉnh (20-30cm)",
+      "features": ["Da mềm", "An toàn", "Có chuông", "Điều chỉnh kích thước"]
+    },
+    {
+      "name": "Lược chải lông mèo chuyên dụng",
+      "price": 130000,
+      "image": "203.webp",
+      "description": "Lược chải lông chuyên dụng giúp loại bỏ lông rụng, giảm tình trạng lông vón cục và giúp bộ lông mèo luôn suôn mượt. Tay cầm chống trượt tiện lợi, phù hợp cho mọi loại lông.",
+      "brand": "GroomPro",
+      "material": "Nhựa ABS, thép không gỉ",
+      "features": ["Loại bỏ lông rụng", "Giảm vón cục", "Lông suôn mượt", "Tay cầm thoải mái"]
+    },
+    {
+      "name": "Bộ cắt móng cho mèo có dũa",
+      "price": 180000,
+      "image": "204.jpg",
+      "description": "Bộ cắt móng chuyên nghiệp cho mèo, lưỡi kéo sắc bén, tay cầm chống trượt, giúp việc cắt móng an toàn và dễ dàng tại nhà. Kèm dũa móng tiện lợi.",
+      "brand": "PetCare",
+      "material": "Thép không gỉ, cao su",
+      "features": ["Lưỡi sắc bén", "Tay cầm chống trượt", "Kèm dũa móng", "An toàn tại nhà"]
+    },
+    {
+      "name": "Chậu cát vệ sinh bán kín chống mùi",
+      "price": 210000,
+      "image": "205.jpg",
+      "description": "Chậu cát vệ sinh bán kín, có nắp che và lưới lọc, giúp hạn chế mùi hôi và giữ vệ sinh không gian sống. Thiết kế rộng rãi, dễ dàng vệ sinh, phù hợp cho mèo mọi kích thước.",
+      "brand": "LitterHouse",
+      "material": "Nhựa PP",
+      "size": "50x40x30cm",
+      "features": ["Bán kín", "Hạn chế mùi", "Dễ vệ sinh", "Rộng rãi"]
+    },
+    {
+      "name": "Đệm ngủ tròn mềm mại và ấm áp",
+      "price": 200000,
+      "image": "206.jpg",
+      "description": "Đệm ngủ tròn mềm mại, ấm áp, tạo không gian thoải mái cho mèo thư giãn và ngủ ngon. Chất liệu vải lông cao cấp, dễ giặt, chống trượt ở đế.",
+      "brand": "CozyPet",
+      "material": "Vải lông, bông PP",
+      "size": "Đường kính 50cm",
+      "features": ["Mềm mại", "Ấm áp", "Dễ giặt", "Chống trượt"]
+    },
+    {
+      "name": "Cây cào móng dạng trụ với đồ chơi",
+      "price": 160000,
+      "image": "207.jpg",
+      "description": "Cây cào móng dạng trụ với sợi sisal tự nhiên, giúp mèo mài móng, bảo vệ đồ đạc trong nhà. Thiết kế chắc chắn, có đồ chơi treo, dễ dàng lắp đặt.",
+      "brand": "ScratchPro",
+      "material": "Sisal, gỗ, vải",
+      "size": "Cao 40cm",
+      "features": ["Mài móng tự nhiên", "Bảo vệ đồ đạc", "Có đồ chơi", "Dễ lắp đặt"]
+    },
+    {
+      "name": "Xịt khử mùi hôi chuồng và không gian sống",
+      "price": 105000,
+      "image": "208.jpg",
+      "description": "Xịt khử mùi chuyên dụng cho chuồng trại và không gian sống của thú cưng. Thành phần tự nhiên, an toàn cho mèo và con người, giúp loại bỏ mùi hôi hiệu quả và mang lại không khí trong lành.",
+      "brand": "FreshPet",
+      "material": "Dung dịch khử mùi tự nhiên",
+      "volume": "250ml",
+      "features": ["Khử mùi hiệu quả", "Thành phần tự nhiên", "An toàn", "Không khí trong lành"]
+    }
+  ]
+}

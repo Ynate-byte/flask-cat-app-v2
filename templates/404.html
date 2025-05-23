@@ -1,0 +1,13 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Trang không tìm thấy - 404{% endblock %}
+
+{% block content %}
+<div class="container py-5 text-center" style="min-height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 class="display-1 text-danger">404</h1>
+    <h2 class="mb-3">Trang không tìm thấy!</h2>
+    <p class="lead">Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị gỡ bỏ.</p>
+    <img src="{{ url_for('static', filename='Image/404cat.jpg') }}" alt="Mèo bị lạc" class="img-fluid my-4" style="max-width: 300px;">
+    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg"><i class="fas fa-home me-2"></i>Về trang chủ</a>
+</div>
+{% endblock %}

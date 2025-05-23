@@ -1,0 +1,173 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Giỏ hàng của bạn - PetShop{% endblock %}
+
+{% block content %}
+    <style>
+        /* CSS dành riêng cho trang giỏ hàng */
+        .cart-item {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-white);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .item-info {
+            flex-grow: 1;
+        }
+
+        .item-info strong {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .item-info p {
+            margin-bottom: 5px;
+        }
+
+        .item-info input[type="number"] {
+            width: 70px;
+            padding: 5px;
+            font-size: 1rem;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .item-info .item-total {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            text-align: right;
+            color: var(--text-dark);
+            border-top: 2px solid var(--border-color);
+            padding-top: 15px;
+        }
+        
+        .delete-btn {
+            background-color: #dc3545; /* Bootstrap danger color */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+            transform: translateY(-1px);
+        }
+    </style>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">🛒 Giỏ hàng của bạn</h2>
+        <div id="cartList"></div>
+        <div class="total" id="totalPrice"></div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg me-3"><i class="fas fa-arrow-left me-2"></i>Tiếp tục mua sắm</a>
+            <button class="btn btn-success btn-lg" onclick="alert('Chức năng thanh toán đang phát triển!')"><i class="fas fa-credit-card me-2"></i>Thanh toán</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartList = document.getElementById('cartList');
+        const totalEl = document.getElementById('totalPrice');
+
+        function renderCart() {
+            cartList.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = "<p class='text-center text-muted'>Giỏ hàng trống.</p>";
+                totalEl.textContent = '';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                // Ensure quantity is a number, default to 1 if not
+                item.quantity = parseInt(item.quantity) || 1; 
+
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-info">
+                        <p><strong>${item.name}</strong></p>
+                        <p>Giá: ${item.price.toLocaleString('vi-VN')}đ</p>
+                        <p>
+                            Số lượng: 
+                            <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                        </p>
+                        <p class="item-total">Thành tiền: <strong>${itemTotal.toLocaleString('vi-VN')}đ</strong></p>
+                    </div>
+                    <button class="delete-btn" onclick="removeItem(${index})"><i class="fas fa-trash-alt"></i> Xóa</button>
+                `;
+                cartList.appendChild(div);
+            });
+
+            totalEl.textContent = `Tổng cộng: ${total.toLocaleString('vi-VN')}đ`;
+        }
+
+        function updateQuantity(index, newQuantity) {
+            newQuantity = parseInt(newQuantity);
+            if (newQuantity >= 1) {
+                cart[index].quantity = newQuantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+                // Update header cart count as well
+                if (window.parent && typeof window.parent.updateCartCount === 'function') {
+                    window.parent.updateCartCount();
+                } else if (typeof updateCartCount === 'function') {
+                    updateCartCount();
+                }
+            }
+        }
+
+        function removeItem(index) {
+            const removedItemName = cart[index].name; // Lấy tên sản phẩm trước khi xóa
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            
+            // Gọi hàm cập nhật giỏ hàng từ base_layout nếu tồn tại
+            if (typeof updateCartCount === 'function') { 
+                updateCartCount(); 
+            }
+
+            // HIỂN THỊ TOAST "Đã xóa"
+            if (typeof showToast === 'function') { // Gọi hàm global showToast
+                showToast(`Đã xóa "${removedItemName}" khỏi giỏ hàng.`, 'info'); // Thay đổi thông báo và loại toast
+            } else {
+                alert(`Đã xóa "${removedItemName}" khỏi giỏ hàng.`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+{% endblock %}

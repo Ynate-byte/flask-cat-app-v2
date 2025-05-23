@@ -1,0 +1,13 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Lỗi máy chủ - 500{% endblock %}
+
+{% block content %}
+<div class="container py-5 text-center" style="min-height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 class="display-1 text-danger">500</h1>
+    <h2 class="mb-3">Lỗi máy chủ nội bộ!</h2>
+    <p class="lead">Có vẻ như có vấn đề gì đó đã xảy ra trên máy chủ của chúng tôi. Chúng tôi đang cố gắng khắc phục.</p>
+    <img src="{{ url_for('static', filename='Image/500_server_error.webp') }}" alt="Lỗi Server" class="img-fluid my-4" style="max-width: 300px;">
+    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg"><i class="fas fa-home me-2"></i>Về trang chủ</a>
+</div>
+{% endblock %}

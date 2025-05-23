@@ -1,0 +1,35 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Trang chủ - PetShop{% endblock %}
+
+{% block content %}
+    <section class="hero-section">
+        <img src="{{ url_for('static', filename='Image/cate4_banner.webp') }}" alt="banner" class="banner-img">
+        <div class="hero-section-content">
+            <h1>Chào mừng đến với PetShop!</h1>
+            <p>Khám phá thế giới đa dạng các sản phẩm và dịch vụ tốt nhất cho thú cưng yêu quý của bạn.</p>
+            <div class="d-flex justify-content-center mt-4 gap-3">
+                <a href="{{ url_for('advise') }}" class="btn btn-primary btn-lg"><i class="fas fa-cat me-2"></i>Nhận diện giống mèo</a>
+                <a href="{{ url_for('food') }}" class="btn btn-outline-secondary btn-lg"><i class="fas fa-shopping-bag me-2"></i>Mua sắm ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 pb-2 border-bottom">Sản phẩm nổi bật</h2>
+        <div class="products-grid">
+            {% for product in featured_products %}
+            <div class="product-card">
+                <a href="{{ url_for('product_detail', category_name=product.category_slug, product_index=product.index) }}" class="text-decoration-none text-dark">
+                    <img src="{{ url_for('static', filename='Image/' + product.image) }}" alt="{{ product.name }}">
+                    <h4 class="product-name">{{ product.name }}</h4>
+                </a>
+                <p class="product-price">{{ "{:,.0f}".format(product.price) }} Đ</p>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+            {% else %}
+            <p class="text-center text-muted">Không có sản phẩm nổi bật nào để hiển thị.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

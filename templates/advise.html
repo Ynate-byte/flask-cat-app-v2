@@ -1,0 +1,22 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Tư vấn - Nhận diện mèo{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <h1 class="text-center mb-4">🐱 Nhận diện giống mèo</h1>
+
+        <form method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data" class="text-center">
+            <div class="mb-3">
+                <label for="fileInput" class="form-label">Chọn ảnh mèo để nhận diện:</label>
+                <input type="file" name="file" id="fileInput" class="form-control" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">📷 Nhận diện</button>
+        </form>
+
+        <div class="text-center mt-4">
+            <p>Hoặc xem báo cáo tổng quan về mô hình:</p>
+            <a href="{{ url_for('evaluation') }}" class="btn btn-outline-secondary">📊 Xem báo cáo mô hình</a>
+        </div>
+    </div>
+{% endblock %}
